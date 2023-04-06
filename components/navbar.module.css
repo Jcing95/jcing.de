@@ -1,0 +1,39 @@
+.navContainer {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.navBack {
+    position: absolute;
+    background-color: var(--jcing-blue);
+    aspect-ratio: var(--navbar-aspect-ratio);
+    width: 100%;
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% var(--navbar-mask-margin-top),
+
+        var(--navbar-mask-margin-left) var(--navbar-mask-margin-top),
+        var(--navbar-mask-margin-left) calc(var(--navbar-mask-height) + var(--navbar-mask-margin-top)),
+        calc(var(--navbar-mask-margin-left) + var(--navbar-mask-width)) calc(var(--navbar-mask-height) + var(--navbar-mask-margin-top)),
+        calc(var(--navbar-mask-margin-left) + var(--navbar-mask-width)) var(--navbar-mask-margin-top),
+        100% var(--navbar-mask-margin-top),
+        100% 33%,
+        0% 100%);
+
+}
+
+.logo {
+    backdrop-filter: blur(2pt);
+    margin-top: var(--navbar-image-margin);
+    margin-left: var(--navbar-image-margin);
+    height: auto;
+    width: var(--navbar-image-width);
+}
+
+.placeHolder {
+    aspect-ratio: var(--navbar-aspect-ratio);
+    width: 100%;
+    background-color: transparent;
+}
