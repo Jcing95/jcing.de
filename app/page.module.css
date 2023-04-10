@@ -26,7 +26,6 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.5em;
-  margin-bottom: 1.5em;
   text-align: center;
   font-size: 48pt;
   animation-name: bobbing;
@@ -56,7 +55,8 @@
 }
 
 .chapter {
-  margin-bottom: 10em;
+  padding-top:25em;
+  padding-bottom: 10em;
 }
 
 .chapter * {
@@ -73,32 +73,35 @@
   margin-right: auto;
 }
 
+a.anchor {
+  display: block;
+  position: relative;
+  top: -30em;
+  visibility: hidden;
+}
+
 .chapter:nth-of-type(4n-2) {
-  --padding-large: 20em;
-  --padding-small: 15em;
+  --padding-top: 25em;
+  --padding-bottom: 10em;
   background-color: var(--jcing-blue);
   color: var(--jcing-white);
-  padding-top: var(--padding-small);
-  padding-bottom: var(--padding-large);
   width: 100%;
   clip-path: polygon(
       0% 0%,
-      100% calc(var(--padding-large) / 2),
+      100% calc(var(--padding-top) / 2),
       100% 100%,
-      0% calc(100% - var(--padding-small) / 2));
+      0% calc(100% - var(--padding-bottom) / 2));
 }
 
 .chapter:nth-of-type(4n) {
-  --padding-large: 20em;
-  --padding-small: 15em;
+  --padding-top: 25em;
+  --padding-bottom: 10em;
   background-color: var(--jcing-blue);
   color: var(--jcing-white);
-  padding-top: var(--padding-small);
-  padding-bottom: var(--padding-large);
   width: 100%;
   clip-path: polygon(
-      0% calc(var(--padding-small) / 2),
+      0% calc(var(--padding-top) / 2),
       100% 0%,
-      100% calc(100% - var(--padding-large) / 2),
+      100% calc(100% - var(--padding-bottom) / 2),
       0% 100%);
 }
